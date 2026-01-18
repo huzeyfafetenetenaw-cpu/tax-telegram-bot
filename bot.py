@@ -1,8 +1,13 @@
 import os
 import pandas as pd
 from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    MessageHandler,
+    ContextTypes,
+    filters
+)
 # Read Excel data
 df = pd.read_excel("Taxdata.xlsx")
 
