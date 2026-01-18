@@ -30,8 +30,7 @@ async def handle_tin(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     TOKEN = os.environ.get("BOT_TOKEN")
-    app = Application.builder().token(TOKEN).build()
-
+    app = Application.builder().token(os.getenv("BOT_TOKEN")).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_tin))
 
